@@ -10,7 +10,7 @@ class FydeCli < Formula
       if Hardware::CPU.intel?
         if Hardware::CPU.is_64_bit?
           url "https://github.com/fyde/fyde-cli/releases/download/v0.4.2/fyde-cli_0.4.2_Linux_x86_64.tar.gz"
-          sha256 "7bf597c88eb2c8627e669e07b26b6d14308d14770f5995ce1ef31838fb481248"
+          sha256 "d407b78dd49051e30952f6272d7335b1fd26a9653305444b8c9b0d9c30ec6eab"
         else
           url "https://github.com/fyde/fyde-cli/releases/download/v0.4.2/fyde-cli_0.4.2_Linux_i386.tar.gz"
           sha256 "091dc5074268f15b8a78bfb8c5942c622b7d8b6415a7fc890df200ddc7ed7495"
