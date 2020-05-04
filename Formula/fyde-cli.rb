@@ -1,19 +1,19 @@
 class FydeCli < Formula
     desc "Cross-platform command line client for Fyde Enterprise Console APIs"
     homepage "https://fyde.github.io/docs/fyde-cli/"
-    version "0.8.3"
+    version "0.8.4"
   
     if OS.mac?
-      url "https://github.com/fyde/fyde-cli/releases/download/v0.8.3/fyde-cli_0.8.3_macOS_x86_64.tar.gz"
-      sha256 "9f22fd6045fcad84d8cd0cf1f30b060ead7ca0c6bfd79ca386115c7e1476e71a"
+      url "https://github.com/fyde/fyde-cli/releases/download/v0.8.4/fyde-cli_0.8.4_macOS_x86_64.tar.gz"
+      sha256 "df59b74bc6f4f779f1a4b19d867c83445fd82acaa37733e8773a8ca6d94535b2"
     elsif OS.linux?
       if Hardware::CPU.intel?
         if Hardware::CPU.is_64_bit?
-          url "https://github.com/fyde/fyde-cli/releases/download/v0.8.3/fyde-cli_0.8.3_Linux_x86_64.tar.gz"
-          sha256 "d2a866b1c8131e634ff2001659893a0ab93b28fb96f0450026816279902e23f2"
+          url "https://github.com/fyde/fyde-cli/releases/download/v0.8.4/fyde-cli_0.8.4_Linux_x86_64.tar.gz"
+          sha256 "f516179b2550e7659f45a4166f93c832cf660e1053012dd7fa0e7838f7596cc0"
         else
-          url "https://github.com/fyde/fyde-cli/releases/download/v0.8.3/fyde-cli_0.8.3_Linux_i386.tar.gz"
-          sha256 "75e037cc96d8d4145385d4791d87f387baca68819deada6e5d10b3ada0b16c8f"
+          url "https://github.com/fyde/fyde-cli/releases/download/v0.8.4/fyde-cli_0.8.4_Linux_i386.tar.gz"
+          sha256 "29d65cc93f5d599820f275bfe90318e2c490794aa9d33df2d861bc4798d4f0ac"
         end
       end
     end
