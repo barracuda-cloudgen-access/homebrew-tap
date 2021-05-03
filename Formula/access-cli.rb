@@ -1,25 +1,25 @@
-class FydeCli < Formula
-    desc "Cross-platform command line client for Fyde Enterprise Console APIs"
-    homepage "https://fyde.github.io/docs/fyde-cli/"
+class AccessCli < Formula
+    desc "Cross-platform command line client for CloudGen Access Enterprise Console APIs"
+    homepage "https://campus.barracuda.com/product/cloudgenaccess/doc/93201559/cloudgen-access-cli-client/"
     version "0.11.0"
 
     if OS.mac?
-      url "https://github.com/fyde/fyde-cli/releases/download/v0.11.0/fyde-cli_0.11.0_macOS_x86_64.tar.gz"
-      sha256 "0a990f3e1b5688e966da886131c93fb6b3e46d2cb685a929d2f1c261f642abda"
+      url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.11.1/access-cli_0.11.1_macOS_x86_64.tar.gz"
+      sha256 "615211d95b67507b50e2c2e260237216b590cbf2b42a0e0a17e77284620cb598"
     elsif OS.linux?
       if Hardware::CPU.intel?
         if Hardware::CPU.is_64_bit?
-          url "https://github.com/fyde/fyde-cli/releases/download/v0.11.0/fyde-cli_0.11.0_Linux_x86_64.tar.gz"
-          sha256 "05a4bed3b1ecfc897237e7a102cead7e9662775a48ad02468b8772a99abc13b4"
+          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.11.1/access-cli_0.11.1_Linux_x86_64.tar.gz"
+          sha256 "5576ba8e80471e117636cc55640cf5fc1ea29fbafdc0a3ab10b7d662c931c48c"
         else
-          url "https://github.com/fyde/fyde-cli/releases/download/v0.11.0/fyde-cli_0.11.0_Linux_i386.tar.gz"
-          sha256 "e0ce9e5b90ebb2c8d3cc79cecaf1609576ec5377ce3f228d24e0c8b8221dfd48"
+          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.11.1/access-cli_0.11.1_Linux_i386.tar.gz"
+          sha256 "3774d189dd8ad9cbc9afba8332baa96dd856843c95df67e4f10bbadf91af2283"
         end
       end
     end
 
     head do
-      url "https://github.com/fyde/fyde-cli.git",
+      url "https://github.com/barracuda-cloudgen-access/access-cli.git",
           :branch => "develop"
 
       depends_on "go" => :build
@@ -56,19 +56,19 @@ class FydeCli < Formula
 
         # Perform build
         system "go", "build",
-          "-o", "fyde-cli",
+          "-o", "access-cli",
           "-ldflags", ldflags.join(" ")
       end
 
-      bin.install "fyde-cli"
+      bin.install "access-cli"
 
       # Install bash completion
-      output = Utils.popen_read("#{bin}/fyde-cli completion bash")
-      (bash_completion/"fyde-cli").write output
+      output = Utils.popen_read("#{bin}/access-cli completion bash")
+      (bash_completion/"access-cli").write output
 
       # Install zsh completion
-      output = Utils.popen_read("#{bin}/fyde-cli completion zsh")
-      (zsh_completion/"_fyde-cli").write output
+      output = Utils.popen_read("#{bin}/access-cli completion zsh")
+      (zsh_completion/"_access-cli").write output
 
       if build.head?
         # Clean up build path (go mod creates files that Homebrew won't delete)
@@ -77,7 +77,7 @@ class FydeCli < Formula
     end
 
     test do
-      version_output = shell_output("#{bin}/fyde-cli version")
+      version_output = shell_output("#{bin}/access-cli version")
       assert_match /Version v?#{Regexp.escape(version)}/, version_output
       refute_match /uncommitted changes/, version_output
     end
