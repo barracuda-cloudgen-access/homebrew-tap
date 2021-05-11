@@ -1,7 +1,7 @@
 class AccessCli < Formula
     desc "Cross-platform command line client for CloudGen Access Enterprise Console APIs"
     homepage "https://campus.barracuda.com/product/cloudgenaccess/doc/93201559/cloudgen-access-cli-client/"
-    version "0.11.0"
+    version "0.11.1"
 
     if OS.mac?
       url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.11.1/access-cli_0.11.1_macOS_x86_64.tar.gz"
