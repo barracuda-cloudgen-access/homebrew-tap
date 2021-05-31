@@ -1,19 +1,19 @@
 class AccessCli < Formula
     desc "Cross-platform command line client for CloudGen Access Enterprise Console APIs"
     homepage "https://campus.barracuda.com/product/cloudgenaccess/doc/93201559/cloudgen-access-cli-client/"
-    version "0.11.1"
+    version "0.12.0"
 
     if OS.mac?
-      url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.11.1/access-cli_0.11.1_macOS_x86_64.tar.gz"
-      sha256 "615211d95b67507b50e2c2e260237216b590cbf2b42a0e0a17e77284620cb598"
+      url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.12.0/access-cli_0.12.0_macOS_x86_64.tar.gz"
+      sha256 "29ddc4dc8e52a5805fcb5809a5848f6468726ccd7193b7b333b0bd285c2c83ce"
     elsif OS.linux?
       if Hardware::CPU.intel?
         if Hardware::CPU.is_64_bit?
-          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.11.1/access-cli_0.11.1_Linux_x86_64.tar.gz"
-          sha256 "5576ba8e80471e117636cc55640cf5fc1ea29fbafdc0a3ab10b7d662c931c48c"
+          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.12.0/access-cli_0.12.0_Linux_x86_64.tar.gz"
+          sha256 "ac8369f273ac474d8fecaf5e64e32991de42ace9d2020ebef2413afd9e42f4e5"
         else
-          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.11.1/access-cli_0.11.1_Linux_i386.tar.gz"
-          sha256 "3774d189dd8ad9cbc9afba8332baa96dd856843c95df67e4f10bbadf91af2283"
+          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.12.0/access-cli_0.12.0_Linux_i386.tar.gz"
+          sha256 "06a2e27640bbcda6779a28d1c1f49872a65ccd0a085e6829073c8d4e1251791a"
         end
       end
     end
