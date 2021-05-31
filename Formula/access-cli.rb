@@ -26,7 +26,7 @@ class AccessCli < Formula
 
       resource "go-swagger" do
         url "https://github.com/go-swagger/go-swagger.git",
-            :tag => "v0.21.0"
+            :tag => "v0.27.0"
       end
     end
 
