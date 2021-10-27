@@ -30,8 +30,6 @@ class AccessCli < Formula
       end
     end
 
-    bottle :unneeded
-
     def install
       if build.head?
         home_bindir = Pathname.new(ENV["HOME"])/"bin"
