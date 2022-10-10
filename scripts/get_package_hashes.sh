@@ -8,7 +8,7 @@ set -o pipefail
 VERSION=$1
 DOWNLOAD_URL='https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v%VERSION/access-cli_%VERSION_%PLATFORM.tar.gz'
 
-PLATFORMS="macOS_x86_64 Linux_x86_64 Linux_i386"
+PLATFORMS="macOS_arm64 macOS_x86_64 Linux_x86_64 Linux_i386"
 
 function print_usage() {
     echo "Usage: $0 [version]"

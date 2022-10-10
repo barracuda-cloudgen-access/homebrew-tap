@@ -4,8 +4,12 @@ class AccessCli < Formula
     version "0.14.1"
 
     if OS.mac?
-      url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.14.1/access-cli_0.14.1_macOS_x86_64.tar.gz"
-      sha256 "2896661150705870c84cb129a6cc96b015b7f9959781e51af642faab1d20fd98"
+      if Hardware::CPU.arm?
+        url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.14.1/access-cli_0.14.1_macOS_arm64.tar.gz"
+        sha256 "02e06aa96d108a41f2c82f2861cf21824ee5e84c8b43005f7e193e1400b65ab3"
+      else
+        url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.14.1/access-cli_0.14.1_macOS_x86_64.tar.gz"
+        sha256 "2896661150705870c84cb129a6cc96b015b7f9959781e51af642faab1d20fd98"
     elsif OS.linux?
       if Hardware::CPU.intel?
         if Hardware::CPU.is_64_bit?
