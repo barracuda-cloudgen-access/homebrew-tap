@@ -10,6 +10,7 @@ class AccessCli < Formula
       else
         url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.14.1/access-cli_0.14.1_macOS_x86_64.tar.gz"
         sha256 "2896661150705870c84cb129a6cc96b015b7f9959781e51af642faab1d20fd98"
+      end
     elsif OS.linux?
       if Hardware::CPU.intel?
         if Hardware::CPU.is_64_bit?
