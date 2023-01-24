@@ -31,3 +31,13 @@ brew install barracuda-cloudgen-access/tap/access-cli --HEAD
 ```
 
 This will download and install any dependencies necessary for compiling the program from source.
+
+## Development
+
+When developing in this repository, any changes that are merged to `master` will be considered "official".
+
+Development process is as simple as follows:
+- Create a fork from this repo
+- Do modifications as needed
+- Create a PR against `master`
+- Merge the PR
