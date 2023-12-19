@@ -1,24 +1,24 @@
 class AccessCli < Formula
     desc "Cross-platform command line client for CloudGen Access Enterprise Console APIs"
     homepage "https://campus.barracuda.com/product/cloudgenaccess/doc/93201559/cloudgen-access-cli-client/" # rubocop:disable Style/StringLiterals
-    version "0.15.2"
+    version "0.15.4"
 
     if OS.mac?
       if Hardware::CPU.arm?
-        url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.15.2/access-cli_macOS_arm64.tar.gz"
-        sha256 "917fb199c4ffbf8a964250b6ebda8311f588bab39f6ebee466c2c13d68f9083b"
+        url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.15.4/access-cli_macOS_arm64.tar.gz"
+        sha256 "f4a41054744ee864973060720c7b9e154cbb14ad7caeb4a3630371cbe2660187"
       else
-        url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.15.2/access-cli_macOS_x86_64.tar.gz"
-        sha256 "0678981d6dc4279b2f72cba897c9247cfb3aceec45f869fe40cec7a561755b47"
+        url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.15.4/access-cli_macOS_x86_64.tar.gz"
+        sha256 "71107d2c7c8066ef2d7b4ee94569e5711f28c9cc5ec45d664fae6d118e74c941"
       end
     elsif OS.linux?
       if Hardware::CPU.intel?
         if Hardware::CPU.is_64_bit?
-          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.15.2/access-cli_Linux_x86_64.tar.gz"
-          sha256 "817401e56801a3e0b8674919f89f863b3e1dcb7c9ea05369550f2be91c1aa103"
+          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.15.4/access-cli_Linux_x86_64.tar.gz"
+          sha256 "d23783c7db9e444de16ae54bcc0501f5e987cf9e6ca6c4d6a0cd21e57aa51478"
         else
-          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.15.2/access-cli_Linux_i386.tar.gz"
-          sha256 "49d04a824c706b059dc7fe9eba5df64a3a64c35a43adf9f26f68f3963179fcca"
+          url "https://github.com/barracuda-cloudgen-access/access-cli/releases/download/v0.15.4/access-cli_Linux_i386.tar.gz"
+          sha256 "99250bca398e61b9bdd8004b3476a8201b63faa3a5b3dc0999a738424609398e"
         end
       end
     end
